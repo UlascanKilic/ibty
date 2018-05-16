@@ -1,0 +1,1473 @@
+{
+    "characters": {
+        "tospik": {
+            "skin": "tospik",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "asker": {
+            "skin": "asker",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "ayse": {
+            "skin": "ayse",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "biyikli": {
+            "skin": "biyikli",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "cubuk": {
+            "skin": "cubuk",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "hanim": {
+            "skin": "hanim",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "hizmetci": {
+            "skin": "hizmetci",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "kilic": {
+            "skin": "kilic",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "kral": {
+            "skin": "kral",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "kralice": {
+            "skin": "kralice",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "mor": {
+            "skin": "mor",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "palyaco": {
+            "skin": "palyaco",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "prenses": {
+            "skin": "prenses",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "prens": {
+            "skin": "prens",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "sari": {
+            "skin": "sari",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "sovelye": {
+            "skin": "sovelye",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "superman": {
+            "skin": "superman",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "tavsan": {
+            "skin": "tavsan",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "yasli": {
+            "skin": "yasli",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "yesil": {
+            "skin": "yesil",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "alevli": {
+            "skin": "alevli",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "cellat": {
+            "skin": "cellat",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+         "iskelet": {
+            "skin": "iskelet",
+            "type": "player",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "at": {
+            "skin": "at",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "civciv": {
+            "skin": "civciv",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+         "fare": {
+            "skin": "fare",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+         "horoz": {
+            "skin": "horoz",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+          "inek": {
+            "skin": "inek",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+         "kedi2": {
+            "skin": "kedi2",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "kedi": {
+            "skin": "kedi",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "kelebek": {
+            "skin": "kelebek",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "kopek": {
+            "skin": "kopek",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "koyun": {
+            "skin": "koyun",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "kurbaga": {
+            "skin": "kurbaga",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "kurt": {
+            "skin": "kurt",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "kus2": {
+            "skin": "kus2",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "kus": {
+            "skin": "kus",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "tavsan1": {
+            "skin": "tavsan1",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        },
+        "tavuk": {
+            "skin": "tavuk",
+            "type": "npc",
+            "rotation": [
+                "E",
+                "S",
+                "W",
+                "N"
+            ],
+            "offsetX": 0,
+            "offsetY": 16,
+            "animState": [
+                "0",
+                "1",
+                "2"
+            ],
+            "pixelSize": "32"
+        }
+        
+    },
+    "entities": {
+        "empty": {
+            "skin": "empty",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "chest1": {
+            "skin": "chest1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "grass1_5": {
+            "skin": "grass1_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "grass1_3": {
+            "skin": "grass1_3",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "grass2_5": {
+            "skin": "grass2_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "grass2_3": {
+            "skin": "grass2_3",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "grass3_5": {
+            "skin": "grass3_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "grass3_3": {
+            "skin": "grass3_3",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "flower1_5": {
+            "skin": "flower1_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "flower1_3": {
+            "skin": "flower1_3",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "flower2_5": {
+            "skin": "flower2_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "flower2_3": {
+            "skin": "flower2_3",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "flower3_5": {
+            "skin": "flower3_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "flower3_3": {
+            "skin": "flower3_3",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "rock1": {
+            "skin": "rock1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "rock2": {
+            "skin": "rock2",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi5N": {
+            "skin": "kapi5N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi5E": {
+            "skin": "kapi5E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi5W": {
+            "skin": "kapi5W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi5S": {
+            "skin": "kapi5S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol5W": {
+            "skin": "kapi_border_sol5W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol5N": {
+            "skin": "kapi_border_sol5N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol5E": {
+            "skin": "kapi_border_sol5E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol5S": {
+            "skin": "kapi_border_sol5S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag5E": {
+            "skin": "kapi_border_sag5E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag5W": {
+            "skin": "kapi_border_sag5W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag5S": {
+            "skin": "kapi_border_sag5S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag5N": {
+            "skin": "kapi_border_sag5N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi1N": {
+            "skin": "kapi1N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi1E": {
+            "skin": "kapi1E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi1W": {
+            "skin": "kapi1W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi1S": {
+            "skin": "kapi1S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol1W": {
+            "skin": "kapi_border_sol1W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol1N": {
+            "skin": "kapi_border_sol1N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol1E": {
+            "skin": "kapi_border_sol1E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol1S": {
+            "skin": "kapi_border_sol1S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag1E": {
+            "skin": "kapi_border_sag1E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag1W": {
+            "skin": "kapi_border_sag1W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag1S": {
+            "skin": "kapi_border_sag1S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag1N": {
+            "skin": "kapi_border_sag1N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi0N": {
+            "skin": "kapi0N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi0E": {
+            "skin": "kapi0E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi0W": {
+            "skin": "kapi0W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi0S": {
+            "skin": "kapi0S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol0W": {
+            "skin": "kapi_border_sol0W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol0N": {
+            "skin": "kapi_border_sol0N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol0E": {
+            "skin": "kapi_border_sol0E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol0S": {
+            "skin": "kapi_border_sol0S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag0E": {
+            "skin": "kapi_border_sag0E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag0W": {
+            "skin": "kapi_border_sag0W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag0S": {
+            "skin": "kapi_border_sag0S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag0N": {
+            "skin": "kapi_border_sag0N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi2N": {
+            "skin": "kapi2N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi2E": {
+            "skin": "kapi2E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi2W": {
+            "skin": "kapi2W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi2S": {
+            "skin": "kapi2S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol2W": {
+            "skin": "kapi_border_sol2W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol2N": {
+            "skin": "kapi_border_sol2N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol2E": {
+            "skin": "kapi_border_sol2E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol2S": {
+            "skin": "kapi_border_sol2S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag2E": {
+            "skin": "kapi_border_sag2E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag2W": {
+            "skin": "kapi_border_sag2W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag2S": {
+            "skin": "kapi_border_sag2S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag2N": {
+            "skin": "kapi_border_sag2N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi3N": {
+            "skin": "kapi3N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi3E": {
+            "skin": "kapi3E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi3W": {
+            "skin": "kapi3W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi3S": {
+            "skin": "kapi3S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol3W": {
+            "skin": "kapi_border_sol3W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol3N": {
+            "skin": "kapi_border_sol3N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol3E": {
+            "skin": "kapi_border_sol3E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol3S": {
+            "skin": "kapi_border_sol3S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag3E": {
+            "skin": "kapi_border_sag3E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag3W": {
+            "skin": "kapi_border_sag3W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag3S": {
+            "skin": "kapi_border_sag3S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag3N": {
+            "skin": "kapi_border_sag3N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi4N": {
+            "skin": "kapi4N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi4E": {
+            "skin": "kapi4E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi4W": {
+            "skin": "kapi4W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi4S": {
+            "skin": "kapi4S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol4W": {
+            "skin": "kapi_border_sol4W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol4N": {
+            "skin": "kapi_border_sol4N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol4E": {
+            "skin": "kapi_border_sol4E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sol4S": {
+            "skin": "kapi_border_sol4S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag4E": {
+            "skin": "kapi_border_sag4E",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag4W": {
+            "skin": "kapi_border_sag4W",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag4S": {
+            "skin": "kapi_border_sag4S",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "kapi_border_sag4N": {
+            "skin": "kapi_border_sag4N",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su1_5": {
+            "skin": "su1_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su2_5": {
+            "skin": "su2_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su3_5": {
+            "skin": "su3_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su4_5": {
+            "skin": "su4_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su5_5": {
+            "skin": "su5_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su6_5": {
+            "skin": "su6_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su7_5": {
+            "skin": "su7_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su8_5": {
+            "skin": "su8_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su9_5": {
+            "skin": "su9_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su10_5": {
+            "skin": "su10_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su11_5": {
+            "skin": "su11_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su12_5": {
+            "skin": "su12_5",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su1_1": {
+            "skin": "su1_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su2_1": {
+            "skin": "su2_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su3_1": {
+            "skin": "su3_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su4_1": {
+            "skin": "su4_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su5_1": {
+            "skin": "su5_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su6_1": {
+            "skin": "su6_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su7_1": {
+            "skin": "su7_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su8_1": {
+            "skin": "su8_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su9_1": {
+            "skin": "su9_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su10_1": {
+            "skin": "su10_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su11_1": {
+            "skin": "su11_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su12_1": {
+            "skin": "su12_1",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su1_4": {
+            "skin": "su1_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su2_4": {
+            "skin": "su2_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su3_4": {
+            "skin": "su3_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su4_4": {
+            "skin": "su4_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su5_4": {
+            "skin": "su5_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su6_4": {
+            "skin": "su6_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su7_4": {
+            "skin": "su7_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su8_4": {
+            "skin": "su8_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su9_4": {
+            "skin": "su9_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su10_4": {
+            "skin": "su10_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su11_4": {
+            "skin": "su11_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        },
+        "su12_4": {
+            "skin": "su12_4",
+            "pixelSize": "32",
+            "offsetX": 0,
+            "offsetY": 0
+        }
+    },
+    "rooms": {
+        "5":{
+             "skin": "5"
+         },
+         "4":{
+             "skin": "4"
+         },
+         "3":{
+             "skin": "3"
+         },
+         "2":{
+             "skin":"2"
+         },
+         "1":{
+             "skin": "1"
+         },
+         "0":{
+             "skin":"0"
+         }
+     }
+}

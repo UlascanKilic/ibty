@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta Http-Equiv="Cache-Control" Content="no-cache">
+  <meta Http-Equiv="Pragma" Content="no-cache">
+  <meta Http-Equiv="Expires" Content="0">
+  <meta Http-Equiv="Pragma-directive: no-cache">
+  <meta Http-Equiv="Cache-directive: no-cache">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link type="text/css" rel="stylesheet" href="jquery.custom-scrollbar.css" />
+  <link rel="stylesheet" href="preload.css">
+  <link rel="stylesheet" href="jquery.mCustomScrollbar.css" />
+  <link rel="stylesheet" type="text/css" href="chat.css">
+  <link rel="stylesheet" href="question.css">
+  <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+  <script src="https://js.cx/libs/animate.js"></script>
+  <script src="jquery.custom-scrollbar.js"></script>
+  <script src="jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src="loaders.js"></script>
+  <script type="text/javascript" src="room.js"></script>
+  <script type="text/javascript" src="room_content.js"></script>
+  <script type="text/javascript" src="character.js"></script>
+  <script type="text/javascript" src="npc.js"></script>
+  <script type="text/javascript" src="player.js"></script>
+  <script type="text/javascript" src="entity.js"></script>
+  <script type="text/javascript" src="item.js"></script>
+  <script type="text/javascript" src="walk.js"></script>
+
+  <script src="chat.js"></script>
+  <script src="jquery-cookie.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+  <script src="ws.js"></script>
+
+
+</head>
+
+<body>
+  <audio preload="true" id="muzik">
+    <source src="music.mp3" />
+  </audio>
+  <script type="text/javascript">
+    muzik = document.getElementById("muzik");
+    muzik.play();
+  </script>
+  <div id="load_screen" style="overflow: hidden;">
+    <div class="ground"></div>
+    <div class="sky">
+      <div class="cloud variant-1"></div>
+      <div class="cloud variant-2"></div>
+      <div class="cloud variant-3"></div>
+      <div class="cloud variant-4"></div>
+      <div class="cloud variant-5"></div>
+    </div>
+    <div class="rainbow-preloader">
+      <div class="rainbow-stripe"></div>
+      <div class="rainbow-stripe"></div>
+      <div class="rainbow-stripe"></div>
+      <div class="rainbow-stripe"></div>
+      <div class="rainbow-stripe"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div style="
+  position: relative;
+  width:  100%;
+  height: 100%;
+">
+    <div class="game">
+      <canvas id="cnvs_suAlani" width="416" height="288"></canvas>
+      <canvas id="cnvs_oyunEkrani" width="416" height="288"></canvas>
+      <canvas id="cnvs_roomContens" width="416" height="288"></canvas>
+    </div>
+
+    <div class="hd-option-window">
+      <div id="hd-chat-messages" class="demo default-skin">
+        <h5>
+          <span style="color:red">System :</span> Selam! Küfür yasaktır!</h5>
+      </div>
+      <div id="hd-chat-input">
+        <div id="hd-chat-text">
+          <input type="text" id="inputText" placeholder="Chat with us" />
+          <div class="hd-input-bar"></div>
+        </div>
+        <div id="hd-chat-send">
+          <p>Send</p>
+          <div class="hd-input-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Soru</h2>
+        </div>
+        <div class="modal-body">
+          <p id="questionText">Some text in the Modal Body</p>
+
+        </div>
+        <div class="modal-footer">
+          <div id="singleChoice">
+            <input type="text" id="AnswerText" placeholder="Cevap" />
+            <br/>
+          </div>
+          <p id="cezaText" style="display: none">Yanlis cevap!</p>
+          <button id="sendAnswer">Send Answer</button>
+
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+ var questionObj;
+
+function getQuestion(soru, choices) {
+    this.soru = soru;
+    this.choices = choices;
+}
+function sendAnswer(answer) {
+  socket.emit("answer",answer);
+}
+function getQuestionResult(time) {
+    this.time = time;
+}
+function breakInterval(interval) {
+    clearInterval(interval);
+    $('#sendAnswer').prop("disabled", false);
+    $('#sendAnswer').css("color", "white");
+    $("#cezaText").css("display", "none");
+   
+}
+
+
+    console.log("geldi");
+    this.soru = "";
+   
+    this.choices = [];
+    this.time = 0;
+
+
+    document.getElementById("questionText").innerHTML = this.soru;
+        $("#singleChoice").css("display", "block");
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btnSendAnswer = $("#sendAnswer");
+   
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    $('#sendAnswer').on('click', function () {
+      var txtAnswer = $("#AnswerText").val();
+        sendAnswer(txtAnswer);
+        $("#AnswerText").val("");
+    });
+
+    // When the user clicks the button, open the modal 
+  
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    </script>
+
+  </div>
+
+  <div id="gameSource"></div>
+</body>
+
+</html>

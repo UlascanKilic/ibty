@@ -1,0 +1,122 @@
+{
+	"room_objects":[
+		{
+			"id":"grass1_5",
+			"themas": [5],
+			"luck": 7,
+			"solid": false,
+			"clickable": false
+		},
+		{
+			"id":"grass1_3",
+			"themas": [3],
+			"luck": 7,
+			"solid": false,
+			"clickable": false
+		},
+		{
+			"id":"grass2_5",
+			"themas": [5],
+			"luck": 7,
+			"solid": false,
+			"clickable": false
+		},
+		{
+			"id":"grass2_3",
+			"themas": [3],
+			"luck": 7,
+			"solid": false,
+			"clickable": false
+		},
+		{
+			"id":"grass3_5",
+			"themas": [5],
+			"luck": 7,
+			"solid": false,
+			"clickable": false
+		},
+		{
+			"id":"grass3_3",
+			"themas": [3],
+			"luck": 7,
+			"solid": false,
+			"clickable": false
+		},
+		{
+			"id":"flower1_5",
+			"themas": [5],
+			"luck": 7,
+			"solid": false,
+			"clickable": false
+		},
+		{
+			"id":"flower1_3",
+			"themas": [3],
+			"luck": 7,
+			"solid": false,
+			"clickable": false
+		},
+		{
+			"id":"flower2_5",
+			"themas": [5],
+			"luck": 7,
+			"solid": false,
+			"clickable": false
+		},
+		{
+			"id":"flower2_3",
+			"themas": [3],
+			"luck": 7,
+			"solid": false,
+			"clickable": false
+		},
+		{
+			"id":"rock1",
+			"themas": [5, 4, 3],
+			"luck": 5,
+			"solid": true,
+			"rotating_mode": 0,
+			"clickable": false
+		},
+		{
+			"id":"chest1",
+			"themas": [5],
+			"luck": 0.2,
+			"solid": true,
+			"rotating_mode": 1,
+			"clickable": true
+		},
+		{
+			"id":"chest1",
+			"themas": [4],
+			"luck": 0.3,
+			"solid": true,
+			"rotating_mode": 1,
+			"clickable": true
+		},
+		{
+			"id":"chest1",
+			"themas": [3],
+			"luck": 0.4,
+			"solid": true,
+			"rotating_mode": 1,
+			"clickable": true
+		},
+		{
+			"id":"chest1",
+			"themas": [2],
+			"luck": 0.5,
+			"solid": true,
+			"rotating_mode": 1,
+			"clickable": true
+		},
+		{
+			"id":"chest1",
+			"themas": [1],
+			"luck": 0.7,
+			"solid": true,
+			"rotating_mode": 1,
+			"clickable": true
+		}
+	]
+}

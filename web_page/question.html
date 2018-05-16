@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="question.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="question.js"></script>
+
+
+</head>
+
+<body>
+    <button id="myBtn">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Soru</h2>
+            </div>
+            <div class="modal-body">
+                <p id="questionText">Some text in the Modal Body</p>
+               
+            </div>
+            <div class="modal-footer">
+               
+                <div id="singleChoice">  
+                    <input type="text" id="AnswerText" placeholder="Cevap" />
+                    <br/>
+                </div>
+                <p id="cezaText" style="display: none">Yanlis cevap!</p>
+                <button id="sendAnswer">Send Answer</button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="login_page.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="jquery-cookie.js"></script>
+    <script src="login_page.js"></script>
+</head>
+
+<body>
+    <div id="gameSource" style="display: none;"></div>
+    <div class="baslik">
+        <p id="baslikP">I'm Better Than You!</p>
+    </div>
+    <div class="nickClass">
+        <div class="itemClass">
+
+            <br/>
+            <input type="text" id="txtNick" placeholder="Nick" />
+            <br/>
+            <div>
+                <div class="skinServer">
+                    <input type="button" class="btnSkin" id="btnPrev" value="<" />
+                    <img src="characters/tospikS0.png" id="skinImage" />
+                    <input type="button" class="btnSkin" id="btnNext" value=">" />
+                </div>
+
+                <br/>
+                <div class="sel">
+                    <select name="select-profession" id="select-profession">
+                        <option value="" disabled>Select Server</option>
+                        <option value="sv1" selected>Server 1</option>
+                        <option value="sv2">Server 2</option>
+                        <option value="sv3">Server 3</option>
+                        <option value="sv4">Server 4</option>
+                        <option value="sv5">Server 5</option>
+                    </select>
+                </div>
+
+
+                <br/>
+
+            </div>
+            <input type="submit" value="Login!" id="giris" />
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
