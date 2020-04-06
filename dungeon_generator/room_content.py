@@ -1,7 +1,10 @@
 import json
+from pprint import pprint
 from random import randint
 
 from calculate.a_star import a_star
+from calculate.dfs import dfs_search
+from entities.npc import NPC
 from entities.room_object import RoomObject
 
 
@@ -15,12 +18,14 @@ class RoomContent:
         self.__empty_content = {'id': 'empty', 'themas': [5, 4, 3, 2, 1, 0], 'luck': 0, 'solid': False, "clickable": False}
 
         self.contents = self.make_matrix(self.__empty_content)
+        self.random_safe_point = None
         self.matrix_protect_base = self.make_protect_base()
         self.matrix_solid_base = self.make_matrix(0)
 
         self.fill_all(content_data)
+        self.accessible_positions = self.set_accessible_positions()
 
-        self.starter_position = (int(self.width / 2 + .5) - 1, int(self.height / 2 + .5) - 1)
+        self.center_position = (int(self.width / 2 + .5) - 1, int(self.height / 2 + .5) - 1)
 
     def make_matrix(self, default):
         return [[default] * self.width for i in range(self.height)]
@@ -38,24 +43,24 @@ class RoomContent:
 
         matrix = self.make_matrix_border(matrix)
 
-        random_safe_point = (randint(1, self.width-2), randint(1, self.height-2))
+        self.random_safe_point = (randint(1, self.width-2), randint(1, self.height-2))
         safe_point_path = []
 
         if self.room.is_ready_port("N"):
             matrix[0][int(self.width/2 + .5)-1] = 0
-            safe_point_path.append(a_star(matrix, (int(self.width/2 + .5)-1, 0), random_safe_point))
+            safe_point_path.append(a_star(matrix, (int(self.width/2 + .5)-1, 0), self.random_safe_point))
         if self.room.is_ready_port("S"):
             matrix[self.height-1][int(self.width/2 + .5)-1] = 0
-            safe_point_path.append(a_star(matrix, (int(self.width/2 + .5)-1, self.height-1), random_safe_point))
+            safe_point_path.append(a_star(matrix, (int(self.width/2 + .5)-1, self.height-1), self.random_safe_point))
         if self.room.is_ready_port("W"):
             matrix[int(self.height/2 + .5)-1][0] = 0
-            safe_point_path.append(a_star(matrix, (0, int(self.height/2 + .5)-1), random_safe_point))
+            safe_point_path.append(a_star(matrix, (0, int(self.height/2 + .5)-1), self.random_safe_point))
         if self.room.is_ready_port("E"):
             matrix[int(self.height/2 + .5)-1][self.width-1] = 0
-            safe_point_path.append(a_star(matrix, (self.width-1, int(self.height/2 + .5)-1), random_safe_point))
+            safe_point_path.append(a_star(matrix, (self.width-1, int(self.height/2 + .5)-1), self.random_safe_point))
 
         if self.room.is_start_room:
-            safe_point_path.append(a_star(matrix, (int(self.width/2 + .5)-1, int(self.height/2 + .5)-1), random_safe_point))
+            safe_point_path.append(a_star(matrix, (int(self.width/2 + .5)-1, int(self.height/2 + .5)-1), self.random_safe_point))
 
         for safe_path in safe_point_path:
             for safe_block in safe_path:
@@ -169,3 +174,182 @@ class RoomContent:
                 if self.contents[y][x].id == id:
                     return self.contents[y][x]
         return False
+
+    def set_accessible_positions(self):
+        graph = {}
+        for y in range(self.height):
+            for x in range(self.width):
+                neighbor = []
+                if x < self.width-1:
+                    if self.matrix_solid_base[y][x+1] == 0:
+                        neighbor.append((x+1, y))
+                if x > 0:
+                    if self.matrix_solid_base[y][x-1] == 0:
+                        neighbor.append((x-1, y))
+                if y < self.height-1:
+                    if self.matrix_solid_base[y+1][x] == 0:
+                        neighbor.append((x, y+1))
+                if y > 0:
+                    if self.matrix_solid_base[y-1][x] == 0:
+                        neighbor.append((x, y-1))
+                graph[(x, y)] = neighbor
+        return dfs_search(graph, self.random_safe_point)
+
+    def fill_npcs(self):
+        if self.room.room_thema > 2:
+            random_val = randint(0, 100000) / 1000
+            if random_val < 10:
+                for i in range(randint(3, 5)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions)-1)]
+                    civciv = NPC("civciv", "")
+                    civciv.speed = 2
+                    civciv.posX = random_accessable_point[0]
+                    civciv.posY = random_accessable_point[1]
+                    civciv.add_event("RandomWalk")
+                    civciv.add_event("Funky", speed=3)
+                    self.room.join_npc(civciv)
+                for i in range(randint(1, 3)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions) - 1)]
+                    tavuk = NPC("tavuk", "")
+                    tavuk.speed = 0.7
+                    tavuk.posX = random_accessable_point[0]
+                    tavuk.posY = random_accessable_point[1]
+                    tavuk.add_event("RandomWalk")
+                    tavuk.add_event("Funky", speed=1.5)
+                    self.room.join_npc(tavuk)
+                for i in range(randint(0, 1)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions) - 1)]
+                    horoz = NPC("horoz", "")
+                    horoz.speed = 0.5
+                    horoz.posX = random_accessable_point[0]
+                    horoz.posY = random_accessable_point[1]
+                    horoz.add_event("RandomWalk")
+                    horoz.add_event("Funky", speed=1.5)
+                    self.room.join_npc(horoz)
+
+            elif random_val < 20:
+                for i in range(randint(1, 4)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions)-1)]
+                    koyun = NPC("koyun", "")
+                    koyun.speed = 0.4
+                    koyun.posX = random_accessable_point[0]
+                    koyun.posY = random_accessable_point[1]
+                    koyun.add_event("RandomWalk")
+                    koyun.add_event("Funky", speed=1.5)
+                    self.room.join_npc(koyun)
+
+            elif random_val < 30:
+                for i in range(randint(1, 4)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions)-1)]
+                    inek = NPC("inek", "")
+                    inek.speed = 0.2
+                    inek.posX = random_accessable_point[0]
+                    inek.posY = random_accessable_point[1]
+                    inek.add_event("RandomWalk")
+                    inek.add_event("Funky", speed=1)
+                    self.room.join_npc(inek)
+
+            elif random_val < 35:
+                for i in range(randint(0, 2)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions)-1)]
+                    kedi = NPC("kedi", "")
+                    kedi.speed = 0.7
+                    kedi.posX = random_accessable_point[0]
+                    kedi.posY = random_accessable_point[1]
+                    kedi.add_event("RandomWalk")
+                    kedi.add_event("Funky", speed=1.5)
+                    self.room.join_npc(kedi)
+                for i in range(randint(0, 2)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions)-1)]
+                    kedi2 = NPC("kedi2", "")
+                    kedi2.speed = 0.7
+                    kedi2.posX = random_accessable_point[0]
+                    kedi2.posY = random_accessable_point[1]
+                    kedi2.add_event("RandomWalk")
+                    kedi2.add_event("Funky", speed=1.5)
+                    self.room.join_npc(kedi2)
+
+            elif random_val < 40:
+                for i in range(randint(1, 2)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions) - 1)]
+                    kopek = NPC("kopek", "")
+                    kopek.speed = 0.5
+                    kopek.posX = random_accessable_point[0]
+                    kopek.posY = random_accessable_point[1]
+                    kopek.add_event("RandomWalk")
+                    self.room.join_npc(kopek)
+
+            elif random_val < 42:
+                for i in range(randint(1, 2)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions) - 1)]
+                    kurt = NPC("kurt", "")
+                    kurt.speed = 0.3
+                    kurt.posX = random_accessable_point[0]
+                    kurt.posY = random_accessable_point[1]
+                    kurt.add_event("RandomWalk")
+                    self.room.join_npc(kurt)
+
+            elif random_val < 47:
+                for i in range(randint(1, 2)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions) - 1)]
+                    kus = NPC("kus", "")
+                    kus.speed = 0.3
+                    kus.posX = random_accessable_point[0]
+                    kus.posY = random_accessable_point[1]
+                    kus.add_event("RandomWalk")
+                    kus.add_event("Funky", speed=2)
+                    self.room.join_npc(kus)
+                for i in range(randint(1, 2)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions) - 1)]
+                    kus2 = NPC("kus2", "")
+                    kus2.speed = 2
+                    kus2.posX = random_accessable_point[0]
+                    kus2.posY = random_accessable_point[1]
+                    kus2.add_event("RandomWalk")
+                    kus2.add_event("Funky", speed=3)
+                    self.room.join_npc(kus2)
+
+            elif random_val < 50:
+                for i in range(randint(1, 2)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions) - 1)]
+                    tavsan1 = NPC("tavsan1", "")
+                    tavsan1.speed = 1
+                    tavsan1.posX = random_accessable_point[0]
+                    tavsan1.posY = random_accessable_point[1]
+                    tavsan1.add_event("RandomWalk")
+                    tavsan1.add_event("Funky", speed=2)
+                    self.room.join_npc(tavsan1)
+
+            elif random_val < 51:
+                for i in range(randint(1, 2)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions) - 1)]
+                    kurbaga = NPC("kurbaga", "")
+                    kurbaga.speed = 1
+                    kurbaga.posX = random_accessable_point[0]
+                    kurbaga.posY = random_accessable_point[1]
+                    kurbaga.add_event("RandomWalk")
+                    kurbaga.add_event("Funky", speed=3)
+                    self.room.join_npc(kurbaga)
+
+            elif random_val < 52:
+                for i in range(randint(1, 3)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions) - 1)]
+                    at = NPC("at", "")
+                    at.speed = 0.5
+                    at.posX = random_accessable_point[0]
+                    at.posY = random_accessable_point[1]
+                    at.add_event("RandomWalk")
+                    at.add_event("Funky", speed=3)
+                    self.room.join_npc(at)
+
+            if randint(0, 100000) / 1000 < 5:
+                for i in range(randint(0, 3)):
+                    random_accessable_point = self.accessible_positions[randint(0, len(self.accessible_positions) - 1)]
+                    kelebek = NPC("kelebek", "")
+                    kelebek.speed = 0.2
+                    kelebek.posX = random_accessable_point[0]
+                    kelebek.posY = random_accessable_point[1]
+                    kelebek.add_event("RandomWalk")
+                    kelebek.add_event("Funky", speed=1)
+                    self.room.join_npc(kelebek)
+

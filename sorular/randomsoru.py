@@ -33,53 +33,26 @@ def terstenislem():
     if(operator == "*"):
         ise = (cevap * sayi1) + sayi2
         sonuc = (ise - sayi2) / sayi1
-        dictory = {'sayi1': sayi1,
-                   'fazla': sayi2,
-                   'ise': ise,
-                   'sayi': cevap,
-                   'sonuc': sonuc
-                   }
-        sorulistesi = list(dictory.values())
-        cevap = str(sorulistesi[2])
-        soru = "Bir sayinin " + str(sorulistesi[0]) + " katinin " + str(sorulistesi[1]) + " fazlasi " + str(
-            sorulistesi[3]) + " ise o sayi kactir ?"
-        dizi = [cevap, soru]
+
+        soru = "Bir sayinin " + str(sayi1) + " katinin " + str(sayi2) + " fazlasi " + str(
+            ise) + " ise o sayi kactir ?"
+        dizi = [sonuc, soru]
         return dizi
 
     elif(operator == "-"):
         ise = (cevap - sayi1) + sayi2
-        sonuc = (ise - sayi2) + sayi1
-        dictory = {'sayi1': sayi1,
-                   'fazla': sayi2,
-                   'ise': ise,
-                   'sayi': cevap,
-                   'sonuc': sonuc
-                   }
-        sorulistesi = list(dictory.values())
-        cevap = str(sorulistesi[2])
-        soru = "Bir sayinin " + str(sorulistesi[0]) + " eksigi " + str(sorulistesi[1]) + " fazlasi " + str(
-            sorulistesi[3]) + " ise o sayi kactir ?"
-        dizi = [cevap, soru]
+        sonuc = (ise + sayi1) - sayi2
+
+        soru = "Bir sayinin " + str(sayi1) + " eksigi " + str(sayi2) + " fazlasi " + str(
+            ise) + " ise o sayi kactir ?"
+        dizi = [sonuc, soru]
         return dizi
+
     elif(operator == "+"):
         ise = (cevap + sayi1) - sayi2
         sonuc = (ise + sayi2) - sayi1
-        dictory = {'sayi1': sayi1,
-                   'fazla': sayi2,
-                   'ise': ise,
-                   'sayi': cevap,
-                   'sonuc': sonuc
-                   }
-        sorulistesi = list(dictory.values())
-        cevap = str(sorulistesi[2])
-        soru = "Bir sayinin " + str(sorulistesi[0]) + " fazlasi " + str(sorulistesi[1]) + " eksigi " + str(
-            sorulistesi[3]) + " ise o sayi kactir ?"
-        dizi = [cevap, soru]
+
+        soru = "Bir sayinin " + str(sayi1) + " fazlasi " + str(sayi2) + " eksigi " + str(
+            ise) + " ise o sayi kactir ?"
+        dizi = [sonuc, soru]
         return dizi
-
-
-
-
-
-
-

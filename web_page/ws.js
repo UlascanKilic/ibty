@@ -1,4 +1,4 @@
-var host = window.location.host;
+var host = window.location.hostname;
 var port = 8888
 
 var socket = io.connect('http://' + host + ':' + port);
@@ -65,7 +65,7 @@ socket.on('despawn', function (id) {
 });
 
 socket.on('move', function (data) {
-    console.log("move", data);
+    //console.log("move", data);
     Groom.getRoomContent(data["id"]).moveTo(data["x"], data["y"], data["t"]);
 });
 

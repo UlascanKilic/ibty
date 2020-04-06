@@ -33,8 +33,8 @@ class RoomObject:
 
     def on_click(self, player):
         [event.on_click(player) for event in list(self.events.values())]
-        if player.move_cooldown <= 0:
-            if self.room.room_content.height-1 > self.posY > 0:
-                if self.room.room_content.width-1 > self.posX > 0:
-                    player.move(self.posX, self.posY)
+        player.last_clicked_object = self
+        if self.room.room_content.height-1 > self.posY > 0:
+            if self.room.room_content.width-1 > self.posX > 0:
+                player.move(self.posX, self.posY)
 

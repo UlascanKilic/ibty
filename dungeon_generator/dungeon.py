@@ -232,6 +232,7 @@ class Dungeon:
         for valid_pos in self.valid_rooms:
             room = self.rooms[valid_pos[0]][valid_pos[1]]
             room.generate_room_content(groupped_by_theme_content_data)
+            room.room_ready()
 
     def join_player(self, player):
         self.players[player.id] = player
@@ -240,5 +241,6 @@ class Dungeon:
                                                 Fore.GREEN + player.client.request.remote_addr + Fore.RESET))
 
     def left_player(self, player):
-        print("disconnected player: %s" % player.name)
+        print("disconnected player: %s, ip: %s" % (Fore.GREEN + player.name + Fore.RESET,
+                                                Fore.GREEN + player.client.request.remote_addr + Fore.RESET))
         del self.players[player.id]

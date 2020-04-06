@@ -103,6 +103,7 @@ class Room:
             door.question = soru_data[1]
 
     def join_player(self, player, port=None):
+        print(player.name + " joined to", self.pos_x, self.pos_y)
         player.despawn()
         spawn_x = int(self.room_content.width/2 + .5)-1
         spawn_y = int(self.room_content.height/2 + .5)-1
@@ -122,11 +123,20 @@ class Room:
         self.players[player.id] = player
         player.spawn(spawn_x, spawn_y, self)
         player.client.load_room_data()
-        player.client.get_characters() #sends characthers
+        player.client.get_characters() #sends characthers to player
 
     def left_player(self, player):
         if player.id in self.players:
             del self.players[player.id]
+
+    def join_npc(self, npc):
+        npc.despawn()
+        self.npcs[npc.id] = npc
+        npc.spawn(npc.posX, npc.posY, self)
+
+    def left_npc(self, npc):
+        if npc.id in self.npcs:
+            del self.players[npc.id]
 
     def get_characters(self):
         characters = dict(self.players)
@@ -138,6 +148,9 @@ class Room:
             if character.id == id:
                 return character
         return False
+
+    def room_ready(self):
+        self.room_content.fill_npcs()
 
     def update(self, dt):
         for y in range(self.room_content.height):

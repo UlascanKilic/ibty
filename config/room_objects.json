@@ -67,7 +67,7 @@
 			"id":"flower2_3",
 			"themas": [3],
 			"luck": 7,
-			"solid": false,
+			"solid": true,
 			"clickable": false
 		},
 		{

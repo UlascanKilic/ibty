@@ -1,6 +1,7 @@
 import threading
 import time
 
+from calculate.a_star import a_star
 from calculate.id_generator import generate_id
 from calculate.distance import *
 from entity_events import *
@@ -42,6 +43,10 @@ class Character:
         [event.spawn(x, y, room) for event in list(self.events.values())]
         self.posX = x
         self.posY = y
+        self.last_pos_x = x
+        self.last_pos_y = y
+        self.move_pos_x = x
+        self.move_pos_y = y
         self.room = room
         self.spawned = True
         for player in list(self.room.players.values()):
@@ -60,26 +65,66 @@ class Character:
             for player in list(self.room.players.values()):
                 player.client.speech({"id": self.id, "message": message})
 
-    move_cooldown = 0
+    is_moving = False
+    move_pos_x = 0
+    move_pos_y = 0
+    last_pos_x = 0
+    last_pos_y = 0
+    move_path = []
+
     def move(self, x, y):
         [event.move(x, y) for event in list(self.events.values())]
-        time = 0
         if self.room is not None:
-            for player in list(self.room.players.values()):
-                distance = distance_2d(self.posX, self.posY, x, y)
-                time = (distance*1000)/self.speed
-                self.move_cooldown = time/1000
-                player.client.move(self.id, x, y, time)
-                threading.Thread(target=delayed_pos_update, args=(self, time, x, y), kwargs={}).start()
-        return time
+            self.is_moving = True
+            matrix_room_solid = self.room.room_content.matrix_solid_base
+            self.move_path = a_star(matrix_room_solid, (int(self.posX), int(self.posY)), (x, y))
+            if len(self.move_path):
+                self.move_path.pop(0)
+
+    def arrived(self):
+        [event.arrived() for event in list(self.events.values())]
 
     def update(self, dt):
         [event.update(dt) for event in list(self.events.values())]
-        if self.move_cooldown > 0:
-            self.move_cooldown -= dt
-        else:
-            self.move_cooldown = 0
-        pass
+        if self.room is not None and self.spawned:
+            if len(self.move_path) and self.posX == self.move_pos_x and self.posY == self.move_pos_y:
+                move_pos = self.move_path.pop(0)
+                self.move_pos_x = move_pos[0]
+                self.move_pos_y = move_pos[1]
+            elif self.is_moving and len(self.move_path) == 0 and self.posX == self.move_pos_x and self.posY == self.move_pos_y:
+                self.is_moving = False
+                self.arrived()
+            elif self.is_moving:
+                walk_distance_x = 0
+                walk_distance_y = 0
+
+                try:
+                    walk_distance_x = (self.move_pos_x - self.posX) / ((abs(self.move_pos_x - self.posX) / self.speed) / dt)
+                except:
+                    pass
+                try:
+                    walk_distance_y = (self.move_pos_y - self.posY) / ((abs(self.posY - self.move_pos_y) / self.speed) / dt)
+                except:
+                    pass
+
+                self.posX += walk_distance_x
+                self.posY += walk_distance_y
+
+                if walk_distance_x > 0 and self.posX > self.move_pos_x:
+                    self.posX = self.move_pos_x
+                if walk_distance_x < 0 and self.posX < self.move_pos_x:
+                    self.posX = self.move_pos_x
+                if walk_distance_y > 0 and self.posY > self.move_pos_y:
+                    self.posY = self.move_pos_y
+                if walk_distance_y < 0 and self.posY < self.move_pos_y:
+                    self.posY = self.move_pos_y
+
+            if self.posX != self.last_pos_x or self.posY != self.last_pos_y:
+                self.last_pos_x = self.posX
+                self.last_pos_y = self.posY
+                for player in list(self.room.players.values()):
+                    player.client.move(self.id, self.posX, self.posY, dt*1000+100)
+
 
     def on_click(self, player):
         [event.on_click(player) for event in list(self.events.values())]
