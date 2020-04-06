@@ -9,7 +9,7 @@ from websocket.client import Client
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
-socketio = SocketIO(app,  ping_timeout=20, ping_interval=10)
+socketio = socketio = SocketIO(app, cors_allowed_origins="*")
 clients = {}
 
 host = None
