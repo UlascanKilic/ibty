@@ -33,13 +33,13 @@ def send_js(path):
     return send_from_directory('web_page', path)
 
 
-def https_thread():
+def http_thread():
     log = logging.getLogger('werkzeug')
     log.setLevel(logging.ERROR)
     app.run(host=host, port=port)
 
 
-def https_start():
+def http_start():
     global host, port
 
     if host is None:
@@ -48,7 +48,7 @@ def https_start():
         host = s.getsockname()[0]
         s.close()
 
-    thr_https = threading.Thread(target=https_thread, args=(), kwargs={})
-    thr_https.start()
+    thr_http = threading.Thread(target=http_thread, args=(), kwargs={})
+    thr_httpz.start()
 
     print(("HTTP server started on" + Fore.BLUE + " %s:%d" + Fore.RESET) % (host, port))
