@@ -5,8 +5,8 @@ import socket
 from colorama import Fore
 from flask import Flask, send_from_directory, request
 
-host = 'https://romantic-ptolemy-17ec44.netlify.app/'
-port = None
+host = None
+port = 80
 app = Flask(__name__)
 
 @app.after_request
@@ -41,6 +41,12 @@ def http_thread():
 
 def http_start():
     global host, port
+
+    if host is None:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        host = s.getsockname()[0]
+        s.close()
 
     thr_http = threading.Thread(target=http_thread, args=(), kwargs={})
     thr_http.start()
