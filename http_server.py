@@ -5,7 +5,7 @@ import socket
 from colorama import Fore
 from flask import Flask, send_from_directory, request
 
-host = None
+host = 'https://romantic-ptolemy-17ec44.netlify.app/'
 port = None
 app = Flask(__name__)
 
