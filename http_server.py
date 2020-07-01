@@ -49,6 +49,6 @@ def http_start():
         s.close()
 
     thr_http = threading.Thread(target=http_thread, args=(), kwargs={})
-    thr_httpz.start()
+    thr_http.start()
 
     print(("HTTP server started on" + Fore.BLUE + " %s:%d" + Fore.RESET) % (host, port))
