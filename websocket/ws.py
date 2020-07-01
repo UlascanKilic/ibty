@@ -14,7 +14,7 @@ socketio = socketio = SocketIO(app, cors_allowed_origins="*")
 clients = {}
 
 host = 'https://romantic-ptolemy-17ec44.netlify.app/'
-port = 8888
+port = None
 
 dungeons = []
 
