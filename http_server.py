@@ -6,7 +6,7 @@ from colorama import Fore
 from flask import Flask, send_from_directory, request
 
 host = 'https://romantic-ptolemy-17ec44.netlify.app/'
-port = None
+port = 8080
 app = Flask(__name__)
 
 @app.after_request
