@@ -42,12 +42,6 @@ def http_thread():
 def http_start():
     global host, port
 
-    if host is None:
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect(("8.8.8.8", 80))
-        host = s.getsockname()[0]
-        s.close()
-
     thr_http = threading.Thread(target=http_thread, args=(), kwargs={})
     thr_http.start()
 
