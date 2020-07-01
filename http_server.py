@@ -6,7 +6,7 @@ from colorama import Fore
 from flask import Flask, send_from_directory, request
 
 host = None
-port = 8080
+port = 80
 app = Flask(__name__)
 
 @app.after_request
@@ -33,13 +33,13 @@ def send_js(path):
     return send_from_directory('web_page', path)
 
 
-def http_thread():
+def https_thread():
     log = logging.getLogger('werkzeug')
     log.setLevel(logging.ERROR)
     app.run(host=host, port=port)
 
 
-def http_start():
+def https_start():
     global host, port
 
     if host is None:
@@ -48,7 +48,7 @@ def http_start():
         host = s.getsockname()[0]
         s.close()
 
-    thr_http = threading.Thread(target=http_thread, args=(), kwargs={})
-    thr_http.start()
+    thr_https = threading.Thread(target=https_thread, args=(), kwargs={})
+    thr_https.start()
 
     print(("HTTP server started on" + Fore.BLUE + " %s:%d" + Fore.RESET) % (host, port))
