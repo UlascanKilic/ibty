@@ -13,7 +13,7 @@ app.config['SECRET_KEY'] = 'secret!'
 socketio = socketio = SocketIO(app, cors_allowed_origins="*")
 clients = {}
 
-host = None
+host = 'https://romantic-ptolemy-17ec44.netlify.app/'
 port = 8888
 
 dungeons = []
@@ -109,11 +109,7 @@ def websocket_start(_dungeons):
     global dungeons, host, port
     dungeons = _dungeons
 
-    if host is None:
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect(("8.8.8.8", 80))
-        host = s.getsockname()[0]
-        s.close()
+   
 
     thr_ws = threading.Thread(target=websocket_thread, args=(), kwargs={})
     thr_ws.start()
