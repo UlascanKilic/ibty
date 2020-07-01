@@ -6,7 +6,7 @@ from colorama import Fore
 from flask import Flask, send_from_directory, request
 
 host = None
-port = 80
+port = None
 app = Flask(__name__)
 
 @app.after_request
